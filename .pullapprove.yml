@@ -10,13 +10,8 @@ pullapprove_conditions:
 
 notifications:
 - when: pull_request.opened
-  comment: >
-    "こんにちは、@{{ author }}さん、テスト通るか確認してね！終わったら、レビューするよ！"
-
-notifications:
+  comment: "こんにちは、@{{ author }}さん、テスト通るか確認してね！終わったら、レビューするよ！"
 - when: pullapprove.approved
   comment: "レビュー終わったよ！@{{ author }}さん、ありがとう！あとはmergeしよう！"
-
-notifications:
 - when: pullapprove.review_requested
   comment: "@{{ requested_reviewers }}さん、レビューお願いします :bow:"
