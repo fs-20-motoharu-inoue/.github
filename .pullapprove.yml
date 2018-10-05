@@ -1,0 +1,22 @@
+version: 3
+
+pullapprove_conditions:
+- "'WIP' not in title"  # only review if not marked as work in progress
+- "'wip' not in labels"  # let hotfix PRs go through without review
+- "'*circleci*' in statuses.successful"  # only review if tests have already passed
+- "'*codecov*' in statuses.successful"  # only review if tests have already passed
+- "'*danger*' in statuses.successful"  # only review if danger have already passed
+- "not mergeable"
+
+notifications:
+- when: pull_request.opened
+  comment: >
+    "こんにちは、@{{ author }}さん、テスト通るか確認してね！終わったら、レビューするよ！"
+
+notifications:
+- when: pullapprove.approved
+  comment: "レビュー終わったよ！@{{ author }}さん、ありがとう！あとはmergeしよう！"
+
+notifications:
+- when: pullapprove.review_requested
+  comment: "@{{ requested_reviewers }}さん、レビューお願いします :bow:"
