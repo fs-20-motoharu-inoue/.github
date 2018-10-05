@@ -1,12 +1,9 @@
 version: 3
 
 pullapprove_conditions:
-- "'WIP' not in title"  # only review if not marked as work in progress
-- "'wip' not in labels"  # let hotfix PRs go through without review
 - "'*circleci*' in statuses.successful"  # only review if tests have already passed
 - "'*codecov*' in statuses.successful"  # only review if tests have already passed
 - "'*danger*' in statuses.successful"  # only review if danger have already passed
-- "base == 'master'"
 - "not mergeable"
 
 notifications:
@@ -20,6 +17,7 @@ notifications:
 groups:
   code:
     reviews:
-      required: 1  # 3 approvals from this group are required
+      required: 1  # 1 approvals from this group are required
+      request: 1  # 1 review request will be sent at a time
       request_order: shuffle  # reviewers will be chosen in a random order
-      author_value: -1  # if the PR author is in this group, automatically add -1
+      author_value: 0  # if the PR author is in this group, automatically add -1
