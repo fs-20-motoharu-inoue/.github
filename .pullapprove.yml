@@ -14,4 +14,4 @@ notifications:
 - when: pullapprove.approved
   comment: "レビュー終わったよ！@{{ author }}さん、ありがとう！あとはmergeしよう！"
 - when: pullapprove.review_requested
-  comment: "@{{ requested_reviewers }}さん、レビューお願いします :bow:"
+  comment: "@{{ requested_reviewers }}さん、レビューお願いします:bow:"
