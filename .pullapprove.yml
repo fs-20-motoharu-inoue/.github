@@ -1,10 +1,12 @@
 version: 3
 
 pullapprove_conditions:
+- "'WIP' not in title"  # only review if not marked as work in progress
+- "'wip' not in labels"  # only review if not marked as work in progress
 - "'*circleci*' in statuses.successful"  # only review if tests have already passed
 - "'*codecov*' in statuses.successful"  # only review if tests have already passed
 - "'*danger*' in statuses.successful"  # only review if danger have already passed
-- "not mergeable"
+# - "not mergeable"
 
 notifications:
 - when: pull_request.opened
