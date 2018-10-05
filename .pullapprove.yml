@@ -25,4 +25,4 @@ groups:
     reviews:
       required: 1  # 3 approvals from this group are required
       request_order: shuffle  # reviewers will be chosen in a random order
-      author_value: 1  # if the PR author is in this group, automatically add +1
+      author_value: -1  # if the PR author is in this group, automatically add -1
