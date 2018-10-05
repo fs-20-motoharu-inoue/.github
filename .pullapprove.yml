@@ -7,9 +7,6 @@ pullapprove_conditions:
 - "'*codecov*' in statuses.successful"  # only review if tests have already passed
 - "'*danger*' in statuses.successful"  # only review if danger have already passed
 - "base == 'master'"
-- "base == 'release-prd'"
-- "base == 'release-stg'"
-- "base == 'develop'"
 - "not mergeable"
 
 notifications:
