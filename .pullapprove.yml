@@ -17,7 +17,7 @@ notifications:
 groups:
   code:
     reviews:
-      required: 1  # 1 approvals from this group are required
+      required: 2  # 1 approvals from this group are required
       request: 1  # 1 review request will be sent at a time
       request_order: shuffle  # reviewers will be chosen in a random order
-      author_value: 0  # if the PR author is in this group, automatically add -1
+      author_value: 0  # if the PR author is in this group, automatically add
