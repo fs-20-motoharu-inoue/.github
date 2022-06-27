@@ -55,8 +55,13 @@ XXX | XXXXX
 <!-- 不要な場合は項目ごと削除する -->
 
 ## PRチェックシートリンク
-<!-- rubyファイルに修正を入れている場合は下記の1行を削除し、PRチェックシートのリンクを貼る -->
-<!-- rubyファイルに修正を入れていない場合は項目ごと削除する -->
+### Ruby
+<!-- Rubyのソースコードに修正を入れている場合は、以下のシートを自分のチェックリストにコピーしてリンクを貼る -->
+<!-- https://docs.google.com/spreadsheets/d/1gCDMqre_RdKzh6-X_fK86Pp_In6jSpMGtMpJs5JMz3c/edit#gid=1451445291 -->
+
+### JavaScript
+<!-- JavaScriptのソースコードに修正を入れている場合は、以下のシートを自分のチェックリストにコピーしてリンクを貼る -->
+<!-- https://docs.google.com/spreadsheets/d/1gCDMqre_RdKzh6-X_fK86Pp_In6jSpMGtMpJs5JMz3c/edit#gid=1195903870 -->
 
 ## 補足事項
 <!-- FMT以外で伝えたいことがある場合のみ -->
